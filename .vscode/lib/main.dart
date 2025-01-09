@@ -37,7 +37,7 @@ void main() {
     }
     print(reverse);
   }
-
+ 
   // palindrome();
   // countDigit(a);
   // reverseMethods();
