@@ -21,7 +21,7 @@ void main() {
   }
 
   palindrome() {
-    int orinilaNum = 123321;
+    int orinilaNum = 123001000321;
     int dupPalinNum = orinilaNum;
 
     int reverse = 0;
@@ -35,9 +35,75 @@ void main() {
     } else {
       return print(false);
     }
-    print(reverse);
   }
- 
+
+  String convertNumberToWords(int number) {
+    if (number == 0) return "zero";
+
+    final List<String> units = [
+      "",
+      "one",
+      "two",
+      "three",
+      "four",
+      "five",
+      "six",
+      "seven",
+      "eight",
+      "nine"
+    ];
+    final List<String> teens = [
+      "ten",
+      "eleven",
+      "twelve",
+      "thirteen",
+      "fourteen",
+      "fifteen",
+      "sixteen",
+      "seventeen",
+      "eighteen",
+      "nineteen"
+    ];
+    final List<String> tens = [
+      "",
+      "",
+      "twenty",
+      "thirty",
+      "forty",
+      "fifty",
+      "sixty",
+      "seventy",
+      "eighty",
+      "ninety"
+    ];
+
+    String result = "";
+
+    if (number >= 1000) {
+      int thousand = number ~/ 1000;
+      result += units[thousand] + " thousand" + " ";
+      number %= 1000;
+    }
+    if (number >= 100) {
+      int hun = number ~/ 100;
+      result += units[hun] + " hundred" + " ";
+      number %= 100;
+    }
+    if (number >= 10) {
+      int uni = number ~/ 10;
+      result += tens[uni] + " ";
+      number %= 10;
+    }
+    if (number > 0) {
+      result += units[number] + " ";
+    }
+
+    return result.trim();
+  }
+
+  int number = 3252;
+  print(convertNumberToWords(number)); // Output: one hundred
+
   // palindrome();
   // countDigit(a);
   // reverseMethods();
