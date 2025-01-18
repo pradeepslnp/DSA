@@ -1,3 +1,5 @@
+import 'dart:math';
+
 void main() {
   // reverse method
 
@@ -102,8 +104,21 @@ void main() {
   }
 
   int number = 3252;
-  print(convertNumberToWords(number)); // Output: one hundred
+  armStrongNum(int originalNum) {
+    int dup = originalNum;
+    int digits = originalNum.toString().length;
+    int sum = 0;
 
+    while (originalNum > 0) {
+      int lastNum = originalNum % 10;
+      sum += pow(lastNum, digits).toInt();
+      originalNum = originalNum ~/ 10;
+    }
+    return sum == dup;
+  }
+
+  print(armStrongNum(143));
+  // print(convertNumberToWords(number)); // Output: one hundred
   // palindrome();
   // countDigit(a);
   // reverseMethods();
