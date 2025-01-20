@@ -117,7 +117,33 @@ void main() {
     return sum == dup;
   }
 
-  print(armStrongNum(143));
+  allDivisors(int num) {
+    int newNum = 0;
+    for (int i = 1; i <= num; i++) {
+      if (num % i == 0) {
+        newNum += i;
+      }
+    }
+    return newNum;
+  }
+
+  primeNumbers(int primNum) {
+    int count = 0;
+    for (int i = 1; i <= primNum; i++) {
+      if (primNum % i == 0) {
+        count++;
+      }
+    }
+    if (count == 2) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  print(primeNumbers(12));
+  // print(allDivisors(12));
+  // print(armStrongNum(143));
   // print(convertNumberToWords(number)); // Output: one hundred
   // palindrome();
   // countDigit(a);
