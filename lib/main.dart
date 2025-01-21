@@ -141,7 +141,16 @@ void main() {
     }
   }
 
-  print(primeNumbers(12));
+  oneToN(int i) {
+    if (i < 1) {
+      return;
+    }
+    oneToN(i - 1);
+    print(i);
+  }
+
+  oneToN(4);
+  // print(primeNumbers(12));
   // print(allDivisors(12));
   // print(armStrongNum(143));
   // print(convertNumberToWords(number)); // Output: one hundred
