@@ -149,7 +149,17 @@ void main() {
     print(i);
   }
 
-  oneToN(4);
+  functionalRecursion(int n) {
+    if (n == 1) {
+      // print(n);
+      return 1;
+    }
+    return n * functionalRecursion(n - 1);
+  } 
+
+  dynamic num = functionalRecursion(3);
+  print(num);
+  // oneToN(4);
   // print(primeNumbers(12));
   // print(allDivisors(12));
   // print(armStrongNum(143));
