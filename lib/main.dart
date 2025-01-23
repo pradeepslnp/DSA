@@ -155,10 +155,56 @@ void main() {
       return 1;
     }
     return n * functionalRecursion(n - 1);
-  } 
+  }
 
-  dynamic num = functionalRecursion(3);
-  print(num);
+  recursionPalindrome(int n) {
+    int originalNum = n;
+    int revNum = 0;
+    if (n > 0) {
+      int lastNum = n % 10;
+      revNum = (revNum * 10) + lastNum;
+      n = n ~/ 10;
+    }
+    if (n == revNum) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  // reverseArray() {
+  List<T> fun<T>(List<T> abc) {
+    if (abc.length == 0) {
+      return abc;
+    }
+
+    return [abc.last] + fun(abc.sublist(0, abc.length - 1));
+  }
+
+  List list = [1, 2, 3, 4, 5, 6, 7];
+
+  print(fun(list));
+  // List reverse = [];
+  // for (int i = abc.length; i >= 0; i--) {
+  //   reverse.add(i);
+  // }
+
+  // int start = 0;
+  // int end = abc.length - 1;
+  // while (start < end) {
+  //   int temp = abc[start];
+  //   abc[start] = abc[end];
+  //   abc[end] = temp;
+  //   start++;
+  //   end--;
+  // }
+  // print(reverse);
+  // }
+
+  // reverseArray();
+  // print(recursionPalindrome(121));
+  // dynamic num = functionalRecursion(3);
+  // print(num);
   // oneToN(4);
   // print(primeNumbers(12));
   // print(allDivisors(12));
