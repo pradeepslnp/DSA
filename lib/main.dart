@@ -182,8 +182,25 @@ void main() {
   }
 
   List list = [1, 2, 3, 4, 5, 6, 7];
+  int i = 0;
+  int n = list.length;
+  reverseArray(int i, List list, int n) {
+    if (i > n / 2) {
+      return;
+    }
 
-  print(fun(list));
+    int temp = list[i];
+    list[i] = list[n];
+    // list[n] = list[i];n 
+    list[n] = temp;
+
+    return reverseArray(i + 1, list, n - 1);
+  }
+
+  reverseArray(i, list, n - 1);
+  print(list);
+
+  // print(fun(list));
   // List reverse = [];
   // for (int i = abc.length; i >= 0; i--) {
   //   reverse.add(i);
