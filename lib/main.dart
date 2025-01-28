@@ -193,7 +193,6 @@ void main() {
     list[i] = list[n];
 // <<<<<<< main
     // list[n] = list[i];n
-=======
     // list[n] = list[i];n 
 // >>>>>>> palindrome
 //     list[n] = temp;
@@ -235,7 +234,6 @@ void main() {
   // print(fibonocci(fib));
   // reverseArray(i, list, n - 1);
   // print(list);
-=======
   reverseArray(i, list, n - 1);
   print(list);
 // >>>>>>> palindrome
