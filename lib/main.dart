@@ -197,8 +197,38 @@ void main() {
     return reverseArray(i + 1, list, n - 1);
   }
 
-  reverseArray(i, list, n - 1);
-  print(list);
+  int fib = 6;
+
+  fibonocci(int n) {
+    if (n <= 1) {
+      return n;
+    }
+    int last = fibonocci(n - 1);
+    print(last);
+    int secondLast = fibonocci(n - 2);
+    print(secondLast);
+
+    return last + secondLast;
+  }
+
+// 011235
+  fibbList() {
+    int a = 0;//1123
+    int b = 1;//0112
+//c=1123
+    for (int i = 0; i <= 6; i++) {
+      int c = a + b;
+      b = a;
+      a = c;
+      print(c);
+    }
+  }
+
+  fibbList();
+
+  // print(fibonocci(fib));
+  // reverseArray(i, list, n - 1);
+  // print(list);
 
   // print(fun(list));
   // List reverse = [];
