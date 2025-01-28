@@ -216,7 +216,8 @@ void main() {
     int a = 0;//1123
     int b = 1;//0112
 //c=1123
-    for (int i = 0; i <= 6; i++) {
+// int hash[256]={0};
+    for (int i = 0; i < 6; i++) {
       int c = a + b;
       b = a;
       a = c;
