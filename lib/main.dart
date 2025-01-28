@@ -191,12 +191,17 @@ void main() {
 
     int temp = list[i];
     list[i] = list[n];
+// <<<<<<< main
     // list[n] = list[i];n
-    list[n] = temp;
+=======
+    // list[n] = list[i];n 
+// >>>>>>> palindrome
+//     list[n] = temp;
 
     return reverseArray(i + 1, list, n - 1);
   }
 
+// <<<<<<< main
   int fib = 6;
 
   fibonocci(int n) {
@@ -230,6 +235,10 @@ void main() {
   // print(fibonocci(fib));
   // reverseArray(i, list, n - 1);
   // print(list);
+=======
+  reverseArray(i, list, n - 1);
+  print(list);
+// >>>>>>> palindrome
 
   // print(fun(list));
   // List reverse = [];
