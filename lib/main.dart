@@ -193,8 +193,7 @@ void main() {
     list[i] = list[n];
 // <<<<<<< main
     // list[n] = list[i];n
-=======
-    // list[n] = list[i];n 
+    // list[n] = list[i];n
 // >>>>>>> palindrome
 //     list[n] = temp;
 
@@ -216,10 +215,11 @@ void main() {
     return last + secondLast;
   }
 
+  fibonocci(10);
 // 011235
   fibbList() {
-    int a = 0;//1123
-    int b = 1;//0112
+    int a = 0; //1123
+    int b = 1; //0112
 //c=1123
 // int hash[256]={0};
     for (int i = 0; i < 6; i++) {
@@ -235,7 +235,6 @@ void main() {
   // print(fibonocci(fib));
   // reverseArray(i, list, n - 1);
   // print(list);
-=======
   reverseArray(i, list, n - 1);
   print(list);
 // >>>>>>> palindrome
@@ -270,4 +269,48 @@ void main() {
   // palindrome();
   // countDigit(a);
   // reverseMethods();
+
+  List arrayList = [2, 3, 4, 1, 1, 7];
+  findSmalllestNum() {
+    arrayList.sort();
+    int expected = 1;
+
+    // int start = 0;
+    // int last = arrayList.length - 1;
+//     while (last > 0) {
+//       for (int i = 0; i < arrayList.length; i++) {
+//         int temp = arrayList[start];
+//         arrayList[start] = arrayList[last];
+//         arrayList[last] = temp;
+//         // print(temp);
+// //         start++;
+//       } arrayList.w
+    List dupList = arrayList.where((n) => n > 0).toList();
+    for (var i in dupList) {
+      if (i == expected) {
+        expected++;
+      }
+    }
+    // return print(arrayList);
+    // }
+    return print("the out put is $expected");
+  }
+
+  findSmalllestNum();
+
+  // count the number of times value is repeated
+  countTheValues(List<int> num) {
+    Map<int, int> frqValues = {};
+    for (int i in num) {
+      frqValues[i] = (frqValues[i] ?? 0) + 1;
+    }
+
+    frqValues.forEach((key, value) {
+      print(
+          " the number ${key} is repeated ${value} times");
+    });
+  }
+
+  List<int> numbers = [1, 2,0,0,0, 3, 1, 2, 3, 5,1,1,1,1,1, 8, 9, 10];
+  countTheValues(numbers);
 }
