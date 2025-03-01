@@ -215,7 +215,7 @@ void main() {
     return last + secondLast;
   }
 
-  fibonocci(10);
+//   fibonocci(10);
 // 011235
   fibbList() {
     int a = 0; //1123
@@ -230,12 +230,12 @@ void main() {
     }
   }
 
-  fibbList();
+//   fibbList();
 
   // print(fibonocci(fib));
   // reverseArray(i, list, n - 1);
   // print(list);
-  reverseArray(i, list, n - 1);
+//   reverseArray(i, list, n - 1);
   print(list);
 // >>>>>>> palindrome
 
@@ -296,7 +296,7 @@ void main() {
     return print("the out put is $expected");
   }
 
-  findSmalllestNum();
+//   findSmalllestNum();
 
   // count the number of times value is repeated
   countTheValues(List<int> num) {
@@ -306,11 +306,26 @@ void main() {
     }
 
     frqValues.forEach((key, value) {
-      print(
-          " the number ${key} is repeated ${value} times");
+      print(" the number ${key} is repeated ${value} times");
     });
   }
 
-  List<int> numbers = [1, 2,0,0,0, 3, 1, 2, 3, 5,1,1,1,1,1, 8, 9, 10];
-  countTheValues(numbers);
+  List<int> numbers = [1, 4, 3, 25, 12, 25, 11, 1411, 14, 1, 4, 4, -4, 14];
+//   countTheValues(numbers);
+  selectionSort() {
+    for (int i = 0; i <= numbers.length - 2; i++) {
+      int mini = i;
+      for (int j = i; j <= numbers.length - 1; j++) {
+        if (numbers[j] < numbers[mini]) {
+          mini = j;
+        }
+      }
+      int temp = numbers[mini];
+      numbers[mini] = numbers[i];
+      numbers[i] = temp;
+    }
+    print(numbers);
+  }
+
+  selectionSort();
 }
